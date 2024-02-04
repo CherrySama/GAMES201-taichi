@@ -1,7 +1,7 @@
 import taichi as ti
 ti.init(arch=ti.gpu)
 
-n = 320
+n = 480
 pixels = ti.field(dtype=float, shape=(n * 2, n))
 
 
