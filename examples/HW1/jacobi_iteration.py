@@ -11,6 +11,7 @@ new_x = ti.field(dtype=ti.f32, shape=n)
 b = ti.field(dtype=ti.f32, shape=n)
 
 @ti.kernel
+# jacobi iteration
 def iterate():
     for i in range(n):
         r = b[i]

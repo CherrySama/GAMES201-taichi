@@ -94,7 +94,7 @@ def substep():
         v[i] += force * dt
 
     for i in ti.grouped(x):
-        v[i] *= ti.exp(-drag_damping * dt)
+        v[i] *= ti.exp(-drag_damping * dt) # 阻尼效应
         offset_to_center = x[i] - ball_center[0]
         if offset_to_center.norm() <= ball_radius:
             # Velocity projection
